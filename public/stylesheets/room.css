@@ -1,0 +1,81 @@
+.message-container {
+    display: block;
+    background: #fff;
+    width: 550px;
+    height: 500px;
+    margin: 0 0 0 15%;
+    border: 1px solid rgba(0,0,0,.2);
+    box-shadow: 2px 4px 15px rgba(0,0,0,.1);
+    padding: 5px;
+    text-overflow: ellipsis;
+    overflow:  auto;
+    position: relative;
+}
+.input-text {
+    margin: 5px 0 0 15%;
+    display: block;
+    width: 550px;
+    height: 100px;
+    background: #fff;
+    padding: 0;
+    position: relative;
+    border: 1px solid rgba(0,0,0,.2);
+    box-shadow: 2px 4px 15px rgba(0,0,0,.1);
+}
+.input-text textarea {
+    width: 450px;
+    height: 100px;
+    resize: none;
+    border: none;
+}
+.input-text button {
+    width: 95px;
+    height: 30px;
+    border: none;
+    top: 65px;
+    position: absolute;
+}
+.input-text textarea:focus{
+    outline: none;
+}
+.top-container {
+    display: block;
+    top: 0;
+    height: 60px;
+    width: auto;
+    margin: 0 0 10px 0;
+    border-bottom: 1px solid rgba(0,0,0,.2);
+    padding: 2px;
+    position: relative;
+}
+.top-container p{
+    display: block;
+    width: auto;
+    height: 50px;
+    margin: 0;
+}
+.friend-div{
+    display: inline-block;
+    left: 5px;
+    top: 10px;
+    position: absolute;
+    height: 50px;
+}
+.user-div{
+    display: inline-block;
+    right: 5px;
+    top: 10px;
+    position: absolute;
+    height: 50px;
+}
+.container-messages {
+    display: block;
+    top: 60px;
+    height: auto;
+    position: absolute;
+    padding-top: 10px; 
+}
+.container-messages li{
+    display: block;
+    height: 30px;
+}

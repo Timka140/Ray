@@ -1,0 +1,24 @@
+include ./mixins
+<!DOCTYPE html>
+html(lang="en")
+head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Login
+    mixin style
+    link(rel="stylesheet", href="/stylesheets/login.css")
+
+body
+    div(class="log-window")
+        h2 Ray
+        div(class='err-inp')
+            p= errInp
+        form(action="/login" method="post")
+            input(type="email", name="email" class="inp-log" placeholder = "Email")
+            input(type="password" name="pass" class="inp-log" placeholder = "Password")
+            div(class="btn-div")
+                button(type="submit" class="butn") Войти
+            a(class="link-log" href="#") Забыл пароль?
+            a(class="link-log" href="/registration") Регистрация
+mixin sctipt

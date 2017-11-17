@@ -1,0 +1,56 @@
+include ./mixins
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title= title
+    mixin style
+  body
+    div(class="conteiner-fluid")
+  div(class='menu-back' id="menuBack")
+  div(class="btn-up-menu" id = 'btnMenu')
+        i(class="fa fa-bars" aria-hidden="true")
+    div(class="left-menu" id="menu")
+      div(class="log-inf")
+        -if (name == undefined) {
+          h5 you are not authorized
+          p Not active
+        -} else {
+          h5 #{name} #{surname}
+          p #{state}
+        -}
+      ul
+        li
+          a(href="/")
+            i(class="fa fa-newspaper-o" aria-hidden="true")
+            p Новости
+        li
+          a(href="/messages")
+            i(class="fa fa-envelope-o" aria-hidden="true")
+            p Сообщения
+        li
+          a(href="/friends")
+            i(class="fa fa-users" aria-hidden="true")
+            p Друзья
+        li
+          a(href="/user") 
+            i(class="fa fa-user-o" aria-hidden="true")
+            p Личный кабинет
+        -if (createNews === true){
+          li
+            a(href="/createnews")
+              i(class="fa fa-pencil-square-o" aria-hidden="true")
+              p Создать статью
+        -}
+        li
+          a(href="/settings")
+            i(class="fa fa-cog" aria-hidden="true")
+            p Настройки
+        li
+          a(id="exit") 
+            i(class="fa fa-sign-out" aria-hidden="true")
+            p Выход
+    div(class="content-block" id="contentId")
+    block content

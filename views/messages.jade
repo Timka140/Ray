@@ -1,0 +1,14 @@
+extends layout
+
+block content   
+    div(class="container-fluid")
+        ul(class="messages-ul" id="ulMessages")
+            -for(var i =0; i<length;i++) {
+                li
+                    //- h5=rooms[i]
+                    //- h5=rooms[i].nick
+                    //- p=rooms[i].message
+                    //- div(class="id-rooms" id=rooms[i]._id)
+            -}
+        mixin sctipt
+        script(src="/javascripts/messages.js")

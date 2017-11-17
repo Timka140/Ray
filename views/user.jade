@@ -1,0 +1,31 @@
+extends layout
+block content
+    div(class="container")
+        div(class="user-head")
+            div(class="user-img")
+                img(src="images/luxfon.com_35067.jpg" width="200px")
+                div(class="btn-img")
+                    ul
+                        li Изменить
+                        li удалить
+            div(class="user-info")
+                ul
+                    li Nick: #{nick}
+                    li Name: #{name}
+                    li Surname: #{surname}
+                    li Email: #{email}
+                    li Date: #{day}.#{month}.#{year}
+            //- div(class="status-user")
+            //-     p  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vitae, dicta?
+            //-     i(class="fa fa-pencil" aria-hidden="true")
+            div(class="menu-user-home")
+                ul
+                    li(id="FriendExpect")
+                        p Заявки в друзья
+                        i(class="fa fa-plus" aria-hidden="true")
+                    li text
+                    li text
+                    li text
+        div(class="content-user" id="listInfo")            
+    mixin sctipt
+    script(src='javascripts/controlmidmenu.js')

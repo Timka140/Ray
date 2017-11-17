@@ -1,0 +1,16 @@
+.news{
+    display: inline-block;
+    height: 174px;
+    width: 196px;
+    margin: 5px;
+    border: 1px solid rgba(0, 0, 0, .1);
+    background: #fff;
+}
+.news-content a{
+    text-decoration: none;
+    color: #0277BD;
+}
+.news-content p {
+    font-size: 11px;
+    margin: 1px;
+}

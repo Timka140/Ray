@@ -1,0 +1,48 @@
+include ./mixins
+<!DOCTYPE html>
+html(lang="en")
+head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title Registration
+    link(rel="stylesheet", href="/stylesheets/registration.css")
+    mixin style
+body
+    div(class="container")
+        h2(class="marg-top") Регистрация на сайте Ray
+        div(class='err-inp')
+            p= errInp
+        div(class="form-cont")
+            form(action="/registration" method="post")
+                label(for="nick") Nick
+                input(type="text" name='nick' id="nick" placeholder="Nick" class="inp-reg")
+            
+                label(for="name") Name
+                input(type="text" name='name' id="name" placeholder="Name" class="inp-reg")
+
+                label(for="surname") Surname
+                input(type="text" name='surname' id="surname" placeholder="Surname" class="inp-reg")
+                
+                label(for="email") Email address
+                input(type="email" name='email' id="email" placeholder="Email" class="inp-reg")
+
+                label(for="confirmEmail") Confirm mail
+                input(type="email" name='confirmEmail' id="confirmEmail" placeholder="Email" class="inp-reg")
+
+                label(for="pass") Password
+                input(type="password" name='password' id="pass" placeholder="Password" class="inp-reg")
+
+                label(for="confirmPass") Confirm password
+                input(type="password" name='confirmPass' id="confirmPass" placeholder="Password" class="inp-reg")
+                div(class="date-div")
+                    label(for="Month" class="lab-time") Day
+                    input(type='text' name='Month' id='day' class="month-reg" placeholder="2")
+                    label(for="Month" class="lab-time") Month
+                    input(type='text' name='Month' id='month' class="month-reg" placeholder="8")
+                    label(for="Month" class="lab-time") Year
+                    input(type='text' name='Month' id='year' class="month-reg" placeholder="2017")
+
+                button Send
+mixin sctipt
+script(src='javascripts/registration.js')

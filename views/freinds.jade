@@ -1,0 +1,21 @@
+extends layout
+
+block content   
+    div(class="container-fluid")
+        input(type="text" name="seachUser" placeholder="Seach users" class="seach-users" id="seach")
+        button(class="btn-seach" id="seachBtn") Seach
+        ul(class="freinds-ul" id="listFriends")
+            -for(var i=0; i<friends.usersLenght; i++){
+                li(class="li-user")
+                    a(href="#" class="a-nick") #{friends.users[i].nick}
+                    p(class="user-name") #{friends.users[i].name} #{friends.users[i].surname}
+                    div(class="btn-messag" id=""+friends.users[i].nick+"") Отправить сообщение
+            -}
+            -if(users == "") {
+                li
+                    h5 No match
+            -}
+        p #{users}
+        <span id='test'>Вы выбрали <strong>ничего</strong></span>
+    mixin sctipt
+    script(src='javascripts/friends.js')

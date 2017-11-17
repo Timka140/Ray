@@ -1,0 +1,72 @@
+.marg-top {
+    margin: 30px 0 0 0;
+}
+.form-cont {
+    display: block;
+    width: 350px;
+}
+
+.form-cont .inp-reg{
+    height: 35px;
+    width: 400px;
+    display: inline-block;
+    border-radius: 4px;
+    border: solid 1px rgba(0, 0, 0, .3);
+    box-shadow: inset 2px 1px 10px rgba(0, 0, 0, .1);
+    padding-left: 10px;
+}
+.month-reg{
+    height: 35px;
+    width: 70px;
+    display: inline-block;
+    border-radius: 4px;
+    border: solid 1px rgba(0, 0, 0, .3);
+    box-shadow: inset 2px 1px 10px rgba(0, 0, 0, .1);
+    text-align: center;
+    margin-right: 5px;
+}
+.date-div {
+    display: block;
+    margin: 10px 0 5px 0;
+}
+.form-cont button {
+    width: 400px;
+    height: 40px;
+    background: #1f4dc2;
+    border: solid 1px black;
+    border-radius: 5px;
+    color: #fff;
+    margin: 10px 0 0 0;
+}
+button:hover {
+    transition: all .2s ease-in-out;
+    background: #1840a3;
+}
+.lab-time {
+    margin: 0 5px 0 0;
+}
+.err-inp{
+    color: red;
+}
+
+@media screen and (max-width: 435px) {
+    .form-cont .inp-reg{
+        height: 32px;
+        width: 330px;
+        padding-left: 10px;
+    }
+    .month-reg{
+        height: 32px;
+        width: 70px;
+        display: inline-block;
+        border-radius: 4px;
+        margin-right: 3px;
+    }
+    .form-cont button {
+        width: 330px;
+        height: 37px;
+    }
+    .marg-top {
+        font-size: 26px;
+    }
+}

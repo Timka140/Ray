@@ -1,0 +1,20 @@
+extends layout
+block content
+    div(class="container-fluid")
+        div(class="message-container")
+            div(class="top-container")
+                div(class="friend-div")
+                    p(id="nickFriend")=nickFriend
+                div(class="user-div")
+                    p(id="nickUser")=nick
+                ul(class="container-messages" id="containerMessages")
+                    -for(var i=0; i<lengthMessages; i++){
+                        li #{messages[i].nick} #{messages[i].message}
+                    -}
+        div(class="input-text" id="publish")
+            textarea(placeholder="Введите сообщение" maxlength="10000" id="message")
+            button(id="sendMessag") Отправить
+    mixin sctipt
+    script(src="/javascripts/socket/socket.io.js")
+    //- script(src="/javascripts/socket/socket.io.js.map")
+    script(src="/javascripts/room.js")
